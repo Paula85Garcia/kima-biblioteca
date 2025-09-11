@@ -1,0 +1,96 @@
+/* Título principal */
+.titulo-principal {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #ff69b4; 
+  text-align: center;
+  margin-bottom: 1.2rem;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.titulo-principal::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #ff69b4; /* línea rosa */
+  margin: 0.8rem auto 0;
+  border-radius: 2px;
+}
+
+/* Texto intro */
+.intro-text {
+  font-size: 1.1rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Caja de búsqueda */
+.busqueda-box input {
+  border-radius: 25px;
+  padding: 0.6rem 1rem;
+  border: 2px solid #ff69b4;
+  transition: all 0.3s ease-in-out;
+}
+
+.busqueda-box input:focus {
+  border-color: #e75480; 
+  box-shadow: 0 0 8px rgba(255, 105, 180, 0.4);
+  outline: none;
+}
+
+/* Tarjetas */
+.card {
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #ffebf0, #fff6fa); /* tonos rosa pastel */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 3px solid rgba(0,0,0,0.1);
+}
+
+.card-body {
+  text-align: center;
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #111;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Botón Detalles */
+.btn-detalles {
+  border-radius: 20px;
+  padding: 0.5rem 1.3rem;
+  background-color: #ff69b4; 
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-detalles:hover {
+  background-color: #e75480; 
+  transform: scale(1.05);
+}

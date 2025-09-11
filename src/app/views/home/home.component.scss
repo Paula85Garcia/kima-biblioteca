@@ -1,0 +1,135 @@
+/*  Título principal */
+.titulo-principal {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #ff69b4;
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.25);
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.titulo-principal::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #000;
+  margin: 0.8rem auto 0;
+  border-radius: 2px;
+}
+
+/*  Subtítulos (h2) */
+.titulo-seccion {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #222;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 2.5rem 0 1.5rem;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.titulo-seccion::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #ff69b4;
+  margin: 0.6rem auto 0;
+  border-radius: 2px;
+}
+
+/*  Texto introductorio */
+.intro-text {
+  font-size: 1.1rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/*  Carrusel */
+.carousel {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.carousel img {
+  height: 400px;
+  object-fit: cover;
+  filter: brightness(0.9);
+  transition: transform 0.4s ease;
+}
+
+.carousel img:hover {
+  transform: scale(1.05);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(255, 105, 180, 0.7);
+  border-radius: 50%;
+  padding: 0.8rem;
+}
+
+/* Tarjetas */
+.card {
+  border: none;
+  border-radius: 14px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #ffebf0, #fff6fa);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  height: 230px;
+  object-fit: cover;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 1rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #111;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Botón personalizado */
+.btn-ver-mas {
+  display: inline-block;
+  border-radius: 20px;
+  padding: 0.5rem 1.3rem;
+  background-color: #ff69b4;
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.95rem;
+  border: none;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-ver-mas:hover {
+  background-color: #e75480;
+  transform: scale(1.05);
+  text-decoration: none;
+}

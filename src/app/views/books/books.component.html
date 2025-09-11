@@ -1,0 +1,35 @@
+<app-header></app-header>
+
+<div class="container mt-4">
+
+  <!-- Título -->
+  <h1 class="titulo-principal">Libros</h1>
+  <p class="intro-text">Explora nuestra colección completa de libros.</p>
+
+  <!-- Campo de búsqueda -->
+  <div class="busqueda-box mb-4">
+    <input 
+      type="text" 
+      [(ngModel)]="searchText" 
+      class="form-control" 
+      placeholder="🔍 Buscar por título o autor">
+  </div>
+
+  <!-- Grid de libros -->
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+    <div class="col" *ngFor="let libro of librosFiltrados">
+      <div class="card h-100 shadow-sm">
+        <img [src]="libro.imagen" class="card-img-top img-fluid" [alt]="libro.titulo">
+        <div class="card-body">
+          <h5 class="card-title">{{ libro.titulo }}</h5>
+          <p class="card-text">{{ libro.descripcion }}</p>
+        </div>
+        <div class="card-footer text-center">
+          <button class="btn-detalles">Detalles</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

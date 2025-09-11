@@ -1,0 +1,36 @@
+.navbar {
+  background: linear-gradient(90deg, #111 0%, #ff9acb 100%);
+  padding: 0.8rem 2rem;
+}
+
+/* Logo */
+.navbar-brand img {
+  border: 2px solid #fff;
+  background: #fff;
+}
+
+.navbar-brand span {
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Links en horizontal */
+.navbar-nav {
+  flex-direction: row; 
+}
+
+.navbar-nav .nav-link {
+  color: #f1f1f1;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffebf4;
+}
+
+.navbar-nav .nav-link.active {
+  color: #ffe0f0;
+  border-bottom: 2px solid #fff;
+}
