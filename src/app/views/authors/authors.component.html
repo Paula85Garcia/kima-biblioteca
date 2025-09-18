@@ -8,7 +8,7 @@
 
   <!-- Grid de autores -->
   <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col" *ngFor="let autor of autores">
+    <div class="col" *ngFor="let autor of autores()">
       <div class="card h-100 shadow-sm">
         <img [src]="autor.imagen" class="card-img-top img-fluid" [alt]="autor.nombre">
         <div class="card-body">

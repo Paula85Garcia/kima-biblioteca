@@ -13,13 +13,13 @@
   <div id="carouselTendencias" class="carousel slide mb-5" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="assets/images/libros/cien-anos.jpg" class="d-block w-100 rounded" alt="Libro 1">
+        <img src="https://res.cloudinary.com/dky2dscgr/image/upload/v1758147879/imagesKYK/libros/mp47go4jeex1y9pfbgkx.jpg" class="d-block w-100 rounded" alt="Libro 1">
       </div>
       <div class="carousel-item">
-        <img src="assets/images/libros/circulo.jpg" class="d-block w-100 rounded" alt="Libro 2">
+        <img src="https://res.cloudinary.com/dky2dscgr/image/upload/v1758147878/imagesKYK/libros/gkwxxofdu7zk2fcbgj61.webp" class="d-block w-100 rounded" alt="Libro 2">
       </div>
       <div class="carousel-item">
-        <img src="assets/images/libros/don-quijote.jpg" class="d-block w-100 rounded" alt="Libro 3">
+        <img src="https://res.cloudinary.com/dky2dscgr/image/upload/v1758147878/imagesKYK/libros/azmtuq24hix47q3jbq4b.jpg" class="d-block w-100 rounded" alt="Libro 3">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselTendencias" data-bs-slide="prev">
@@ -33,9 +33,9 @@
   <!-- Recomendados -->
   <h2 class="titulo-seccion">📚 Recomendados para ti</h2>
   <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col" *ngFor="let libro of libros">
+    <div class="col" *ngFor="let libro of libros()">
       <div class="card h-100 shadow-sm">
-        <img [src]="libro.imagen" class="card-img-top img-fluid" [alt]="libro.titulo">
+        <img [src]="libro.imagen" class="card-img-top img-fluid" [alt]="libro.titulo" style="object-fit: cover; height: 300px;">
         <div class="card-body">
           <h5 class="card-title">{{ libro.titulo }}</h5>
           <p class="card-text">{{ libro.descripcion }}</p>
