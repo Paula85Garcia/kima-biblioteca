@@ -30,12 +30,12 @@ export class AuthorsComponent {
     {
       nombre: 'Mario Vargas Llosa',
       biografia: 'Novelista peruano, ganador del Premio Nobel de Literatura y uno de los escritores más influyentes de Latinoamérica.',
-      imagen: 'https://res.cloudinary.com/dky2dscgr/image/upload/v1758147873/imagesKYK/autores/mario-vargas-llosa.jpg' // Cambia si tienes URL real
+      imagen: 'https://res.cloudinary.com/dky2dscgr/image/upload/v1758147873/imagesKYK/autores/mario-vargas-llosa.jpg' 
     },
     {
       nombre: 'Laura Esquivel',
       biografia: 'Escritora mexicana conocida por su novela "Como agua para chocolate".',
-      imagen: 'https://res.cloudinary.com/dky2dscgr/image/upload/v1758147874/imagesKYK/autores/laura-esquivel.jpg' // Cambia si tienes URL real
+      imagen: 'https://res.cloudinary.com/dky2dscgr/image/upload/v1758147874/imagesKYK/autores/laura-esquivel.jpg' 
     }
   ]);
 }
