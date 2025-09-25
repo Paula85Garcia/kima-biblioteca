@@ -141,7 +141,55 @@ export class LibrosService {
   "búsqueda de sentido"
 ]
 
-    }
+    },
+        {
+      id: 9,
+      titulo: 'Cien Años De Soledad ',
+      autor: 'Gabriel Garcia Marquez',
+      descripcion: '"Muchos años después, frente al pelotón de fusilamiento, el coronel Aureliano Buendía había de recordar aquella tarde remota en que su padre lo llevó a conocer el hielo. Macondo era entonces una aldea de veinte casas de barro y cañabrava construidas a la orilla de un río de aguas diáfanas que se precipitaban por un lecho de piedras pulidas, blancas y enormes como huevos prehistóricos. El mundo era tan reciente, que muchas cosas carecían de nombre, y para mencionarlas había que señalarlas con el dedo."Mito por derecho propio, saludada por sus lectores como la obra en español más importante después de la Biblia, Cien años de soledad cuenta la saga de la familia Buendía y su maldición, que castiga el matrimonio entre parientes dándoles hijos con cola de cerdo. Como un río desbordante, a lo largo de un siglo se entretejerán sus destinos por medio de sucesos maravillosos en el fantástico pueblo de Macondo, en una narración que es la cumbre indiscutible del realismo mágico y la literatura del boom. Alegoría universal, es también una visión de Latinoamérica y una parábola sobre la historia humana.',
+      imagen: 'https://res.cloudinary.com/dky2dscgr/image/upload/v1758147877/imagesKYK/libros/krnw6aktyxradcipyukx.jpg',
+      temas: [
+  "soledad",
+  "realismo mágico",
+  "tiempo cíclico / repetición histórica",
+  "la familia y la herencia ancestral",
+  "memoria y olvido",
+  "amor y pasión",
+  "Destino inevitable",
+  "corrupción del poder",
+  "crítica social",
+  "identidad personal y colectiva",
+  "tradición vs. cambio",
+  "aislamiento geográfico y cultural"
+]
+
+
+    },
+     {
+      id: 10,
+      titulo: 'Peel Back the Skin: Anthology of Horror Stories ',
+      autor: 'Jonathan Maberry',
+      descripcion: 'They re among us.They live down the street, in the apartment next door and even in our own homes. Theyre the real monsters. And they stare back at us from our bathroom mirrors.PEEL BACK THE SKIN is a powerhouse anthology of terror that strips away the human mask from the real monsters of our time -- mankind. Featuring a star-studded cast of award-winning authors from the horror, dark fantasy, speculative fiction, transgressive, bizzaro, extreme horror and thriller genres, PEEL BACK THE SKIN is the next game-changing release from Grey Matter Press.PEEL BACK THE SKIN includes fifteen all-new works of fiction from Jonathan Maberry, Ray Garton, Tim Lebbon, Graham Masterton, Yvonne Navarro, Ed Kurtz, Durand Sheng Welsh, James Lowder, Joe McKinney, Lucy Taylor, Charles Austin Muir, Erik Williams, Nancy A. Collins, John McCallum Swain and William Meikle. From Bram Stoker Award-nominated editors Anthony Rivera and Sharon Lawson.',
+      imagen: 'https://res.cloudinary.com/dky2dscgr/image/upload/v1758147876/imagesKYK/categorias/de7sysjz58vefpgwcjcm.png',
+      temas: [
+  "la naturaleza humana como monstruo",
+  "culpa y remordimiento",
+  "trauma psicológico",
+  "violencia familiar y abuso",
+  "pérdida / duelo",
+  "justicia oscura / venganza",
+  "delirio / locura",
+  "fantasmas / sobrenatural",
+  "realismo mágico mezclado con horror psicológico",
+  "moralidad ambigua",
+  "sociedad corrupta",
+  "monstruos externos vs. internos",
+  "el peso del pasado",
+  "aislamiento y alienación",
+  "religión / fanatismo"
+]
+    },
+    
   ];
 
   getLibros() {
