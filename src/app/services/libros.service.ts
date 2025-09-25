@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-// Actualizar la interfaz Libro para incluir la propiedad temas
+
 export interface Libro {
   id: number;
   titulo: string;
   autor: string;
   descripcion: string;
   imagen: string;
-  temas?: string[]; // Añadir esta línea para incluir temas
+  temas?: string[]; 
 }
 
 @Injectable({
