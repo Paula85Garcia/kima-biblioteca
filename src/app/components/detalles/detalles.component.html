@@ -1,55 +1,50 @@
-<app-header></app-header>
+<div class="container mt-4" *ngIf="libro as libroData; else noLibro">
+  <div class="detalles-card">
+    <div class="detalles-header text-center">
+      <img [src]="libroData.imagen" [alt]="libroData.titulo" class="detalles-img">
+      <h1 class="titulo-principal">{{ libroData.titulo }}</h1>
+    </div>
 
-<div class="container mt-4" @If="libro; else noLibro">
-  <div class="card mb-4">
-    <div class="card-body">
-      <!-- Título del libro -->
-      <h1 class="titulo-principal" [@Class]="{ 'destacado': libro.id === 1 }">
-        {{ libro.titulo }}
-      </h1>
+    <div class="acciones text-center">
+      <button class="btn-accion">❤</button>
+      <button class="btn-accion">🔖</button>
+      <button class="btn-accion">≡</button>
+    </div>
 
-      <!-- Autor -->
-      <p class="autor" [@Style]="{ 'font-weight': libro.id === 1 ? 'bold' : 'normal' }">
-        Autor: <span [@Class]="{ 'autor-premiado': libro.id === 1 }">{{ libro.autor }}</span>
-      </p>
+    <div class="acciones text-center mt-3">
+      <button class="btn-principal">📖 Leer</button>
+      <button class="btn-principal">➕ Agregar a biblioteca</button>
+    </div>
 
-      <!-- Imagen -->
-      <div class="text-center mb-3">
-        <img [src]="libro.imagen" [alt]="libro.titulo" class="img-fluid rounded" style="max-height: 400px; width: auto; height: auto;">
-      </div>
+    <div class="detalles-info mt-4">
+      <p><strong>Autor:</strong> {{ libroData.autor }}</p>
+    </div>
 
-      <!-- Descripción -->
-      <p class="lead">{{ libro.descripcion }}</p>
+    <div class="temas mt-4">
+      <h4>Temas del libro:</h4>
+      <ul>
+        @for (tema of libroData.temas; track tema; let i = $index) {
+          <li>Tema #{{ i + 1 }}: {{ tema }}</li>
+        } @empty {
+          <li class="text-muted">Este libro no tiene temas asignados.</li>
+        }
+      </ul>
+    </div>
 
-      <!-- Ejemplo con ngSwitch -->
-      <div [*Switch]="libro.id">
-        <p *ngSwitchCase="1">🏆 Este libro es altamente recomendado.</p>
-        <p *ngSwitchCase="2">📘 Recomendado para amantes de la tecnología.</p>
-        <p *ngSwitchDefault>📖 Un excelente libro para explorar.</p>
-      </div>
+    <div class="sinopsis mt-4">
+      <h4>Sinopsis</h4>
+      <p>{{ libroData.descripcion }}</p>
+    </div>
 
-      <!-- Lista de temáticas del libro -->
-      <div @If="libro.temas && libro.temas.length > 0">
-        <h5 class="mt-4">Temas del libro:</h5>
-        <ul class="list-group">
-          <li @For="let tema of libro.temas" class="list-group-item">{{ tema }}</li>
-        </ul>
-      </div>
-
-      <!-- Botón de volver -->
-      <div class="mt-4 text-center">
-        <a routerLink="/" class="btn btn-detalles">← Volver</a>
-      </div>
+    <div class="text-center mt-4">
+      <a routerLink="/" class="btn-volver">← Volver</a>
     </div>
   </div>
 </div>
 
-<!-- Plantilla alternativa si no se encontró el libro -->
 <ng-template #noLibro>
-  <div class="container mt-4">
-    <h3 class="text-danger">Libro no encontrado</h3>
-    <a routerLink="/" class="btn btn-secondary">← Volver</a>
+  <div class="container mt-4 text-center">
+    <h3 class="text-danger">📕 Libro no encontrado</h3>
+    <a routerLink="/" class="btn-volver">← Volver</a>
   </div>
 </ng-template>
-
-<app-footer></app-footer>

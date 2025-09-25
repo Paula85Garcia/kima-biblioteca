@@ -1,71 +1,106 @@
-/* Título principal */
-.titulo-principal {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2.6rem;
-  font-weight: 700;
-  color: #ff69b4; 
-  text-align: center;
-  margin-bottom: 1.2rem;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.2);
-  position: relative;
+.detalles-card {
+  background: #fff0f6;
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  max-width: 800px;
+  margin: auto;
 }
 
-.titulo-principal::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: #ff69b4; /* línea rosa */
-  margin: 0.8rem auto 0;
-  border-radius: 2px;
+.detalles-header {
+  margin-bottom: 1.5rem;
 }
 
-/* Texto intro */
-.intro-text {
-  font-size: 1.1rem;
-  color: #555;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-/* Tarjetas */
-.card {
-  border: none;
+.detalles-img {
+  max-height: 320px;
   border-radius: 14px;
-  background: linear-gradient(145deg, #ffebf0, #fff6fa); /* tonos rosa pastel */
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  margin-bottom: 1rem;
 }
 
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+.titulo-principal {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #e75480;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.15);
 }
 
-.card-img-top {
-  height: 220px;
-  object-fit: cover;
-  border-bottom: 3px solid rgba(0,0,0,0.1);
+.acciones {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
-.card-body {
-  text-align: center;
-  padding: 1rem;
-}
-
-/* Botón Detalles */
-.btn-detalles {
-  border-radius: 20px;
-  padding: 0.5rem 1.3rem;
-  background-color: #ff69b4; 
-  color: #fff;
-  font-weight: 500;
-  font-size: 0.95rem;
-  border: none;
+.btn-accion {
+  background: #fff;
+  border: 2px solid #ff69b4;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.2rem;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: 0.3s;
 }
 
-.btn-detalles:hover {
-  background-color: #e75480; 
+.btn-accion:hover {
+  background: #ff69b4;
+  color: #fff;
+}
+
+.btn-principal {
+  border: none;
+  border-radius: 20px;
+  padding: 0.6rem 1.5rem;
+  background: #ff69b4;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  transition: 0.3s;
+}
+
+.btn-principal:hover {
+  background: #e75480;
   transform: scale(1.05);
+}
+
+.detalles-info p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+  color: #444;
+}
+
+.temas ul {
+  list-style: none;
+  padding: 0;
+}
+
+.temas li {
+  background: #ffe4ec;
+  display: inline-block;
+  margin: 0.2rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+}
+
+.sinopsis {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+}
+
+.btn-volver {
+  display: inline-block;
+  border-radius: 20px;
+  padding: 0.5rem 1.2rem;
+ background: #ff69b4;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-volver:hover {
+  background: #e75480;
 }
