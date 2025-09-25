@@ -17,22 +17,35 @@
   </div>
 
   <!-- Grid de libros -->
-  <div class="row row-cols-1 row-cols-md-4 g-4">
-    <div class="col" *ngFor="let libro of librosFiltrados()">
-      <div class="card h-100 shadow-sm">
-        <img [src]="libro.imagen" class="card-img-top img-fluid" [alt]="libro.titulo">
-        <div class="card-body">
-          <h5 class="card-title">{{ libro.titulo }}</h5>
-          <p class="card-autor text-muted mb-2">{{ libro.autor }}</p>
-          <p class="card-text">{{ libro.descripcion }}</p>
-        </div>
-        <div class="card-footer text-center">
-        <a [routerLink]="['/detalles', libro.id]" class="btn-detalles">Detalles</a>
+   </div>
 
+  <!-- Grid de libros -->
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+    @for (libro of librosFiltrados(); track libro.id) {
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img [src]="libro.imagen" class="card-img-top img-fluid" [alt]="libro.titulo">
+          <div class="card-body">
+            <h5 class="card-title">{{ libro.titulo }}</h5>
+            <p class="card-autor text-muted mb-2">{{ libro.autor }}</p>
+            <p class="card-text">{{ libro.descripcion }}</p>
+          </div>
+          <div class="card-footer text-center">
+           <a [routerLink]="['/detalles', libro.id]" class="btn-detalles">Detalles</a>
+          </div>
         </div>
       </div>
-    </div>
+    } @empty {
+      <div class="col">
+        <p class="text-muted">No se encontraron libros.</p>
+      </div>
+    }
   </div>
-</div>
+
+
+        
+
+      
+
 
 <app-footer></app-footer>
